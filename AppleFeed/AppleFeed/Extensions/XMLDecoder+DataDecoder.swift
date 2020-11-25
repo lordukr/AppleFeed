@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import XMLParsing
+import XMLCoder
 import Alamofire
 
 extension XMLDecoder: DataDecoder { }
