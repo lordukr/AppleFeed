@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		8E20DABE256F13B600AB8935 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E20DABD256F13B600AB8935 /* AppDelegate.swift */; };
 		8E20DAC0256F13B600AB8935 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E20DABF256F13B600AB8935 /* SceneDelegate.swift */; };
-		8E20DAC2256F13B600AB8935 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E20DAC1256F13B600AB8935 /* ViewController.swift */; };
-		8E20DAC5256F13B600AB8935 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E20DAC3256F13B600AB8935 /* Main.storyboard */; };
 		8E20DAC7256F13B800AB8935 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E20DAC6256F13B800AB8935 /* Assets.xcassets */; };
 		8E20DACA256F13B800AB8935 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E20DAC8256F13B800AB8935 /* LaunchScreen.storyboard */; };
 		8E20DADE256F13EE00AB8935 /* FeedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E20DAD2256F13EE00AB8935 /* FeedItem.swift */; };
@@ -25,14 +23,13 @@
 		8E20DAF425702C6900AB8935 /* FeedListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E20DAF325702C6900AB8935 /* FeedListView.swift */; };
 		8E20DAF825702C7A00AB8935 /* FeedListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E20DAF725702C7A00AB8935 /* FeedListViewModel.swift */; };
 		8E20DAFB25702C9200AB8935 /* FeedListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E20DAFA25702C9200AB8935 /* FeedListViewController.swift */; };
+		8E20DB052570375000AB8935 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8E20DB042570375000AB8935 /* SnapKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8E20DABA256F13B600AB8935 /* AppleFeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppleFeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E20DABD256F13B600AB8935 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8E20DABF256F13B600AB8935 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8E20DAC1256F13B600AB8935 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		8E20DAC4256F13B600AB8935 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8E20DAC6256F13B800AB8935 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8E20DAC9256F13B800AB8935 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8E20DACB256F13B800AB8935 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -53,6 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E20DB052570375000AB8935 /* SnapKit in Frameworks */,
 				8E20DAEC256F153D00AB8935 /* XMLCoder in Frameworks */,
 				8E20DAE8256F14BB00AB8935 /* Alamofire in Frameworks */,
 			);
@@ -84,8 +82,6 @@
 				8E20DAD3256F13EE00AB8935 /* API */,
 				8E20DADC256F13EE00AB8935 /* Extensions */,
 				8E20DAF0257029B600AB8935 /* Modules */,
-				8E20DAC1256F13B600AB8935 /* ViewController.swift */,
-				8E20DAC3256F13B600AB8935 /* Main.storyboard */,
 				8E20DAC6256F13B800AB8935 /* Assets.xcassets */,
 				8E20DAC8256F13B800AB8935 /* LaunchScreen.storyboard */,
 				8E20DACB256F13B800AB8935 /* Info.plist */,
@@ -192,6 +188,7 @@
 			packageProductDependencies = (
 				8E20DAE7256F14BB00AB8935 /* Alamofire */,
 				8E20DAEB256F153D00AB8935 /* XMLCoder */,
+				8E20DB042570375000AB8935 /* SnapKit */,
 			);
 			productName = AppleFeed;
 			productReference = 8E20DABA256F13B600AB8935 /* AppleFeed.app */;
@@ -223,6 +220,7 @@
 			packageReferences = (
 				8E20DAE6256F14BB00AB8935 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				8E20DAEA256F153D00AB8935 /* XCRemoteSwiftPackageReference "XMLCoder" */,
+				8E20DB032570375000AB8935 /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			productRefGroup = 8E20DABB256F13B600AB8935 /* Products */;
 			projectDirPath = "";
@@ -240,7 +238,6 @@
 			files = (
 				8E20DACA256F13B800AB8935 /* LaunchScreen.storyboard in Resources */,
 				8E20DAC7256F13B800AB8935 /* Assets.xcassets in Resources */,
-				8E20DAC5256F13B600AB8935 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,7 +249,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E20DADE256F13EE00AB8935 /* FeedItem.swift in Sources */,
-				8E20DAC2256F13B600AB8935 /* ViewController.swift in Sources */,
 				8E20DAE3256F13EE00AB8935 /* ApiConfiguration.swift in Sources */,
 				8E20DAFB25702C9200AB8935 /* FeedListViewController.swift in Sources */,
 				8E20DABE256F13B600AB8935 /* AppDelegate.swift in Sources */,
@@ -270,14 +266,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		8E20DAC3256F13B600AB8935 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8E20DAC4256F13B600AB8935 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		8E20DAC8256F13B800AB8935 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -483,6 +471,14 @@
 				minimumVersion = 0.11.1;
 			};
 		};
+		8E20DB032570375000AB8935 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -495,6 +491,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 8E20DAEA256F153D00AB8935 /* XCRemoteSwiftPackageReference "XMLCoder" */;
 			productName = XMLCoder;
+		};
+		8E20DB042570375000AB8935 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8E20DB032570375000AB8935 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

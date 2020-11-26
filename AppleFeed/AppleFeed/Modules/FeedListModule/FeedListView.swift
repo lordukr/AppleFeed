@@ -5,4 +5,9 @@
 //  Created by azavialov on 26.11.2020.
 //
 
-import Foundation
+import UIKit
+import Combine
+
+class FeedListView: UIView {
+  
+}
