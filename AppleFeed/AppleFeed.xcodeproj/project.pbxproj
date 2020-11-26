@@ -22,6 +22,9 @@
 		8E20DAE4256F13EE00AB8935 /* XMLDecoder+DataDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E20DADD256F13EE00AB8935 /* XMLDecoder+DataDecoder.swift */; };
 		8E20DAE8256F14BB00AB8935 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 8E20DAE7256F14BB00AB8935 /* Alamofire */; };
 		8E20DAEC256F153D00AB8935 /* XMLCoder in Frameworks */ = {isa = PBXBuildFile; productRef = 8E20DAEB256F153D00AB8935 /* XMLCoder */; };
+		8E20DAF425702C6900AB8935 /* FeedListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E20DAF325702C6900AB8935 /* FeedListView.swift */; };
+		8E20DAF825702C7A00AB8935 /* FeedListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E20DAF725702C7A00AB8935 /* FeedListViewModel.swift */; };
+		8E20DAFB25702C9200AB8935 /* FeedListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E20DAFA25702C9200AB8935 /* FeedListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +43,9 @@
 		8E20DAD9256F13EE00AB8935 /* ApiConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiConstants.swift; sourceTree = "<group>"; };
 		8E20DADB256F13EE00AB8935 /* ApiConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiConfiguration.swift; sourceTree = "<group>"; };
 		8E20DADD256F13EE00AB8935 /* XMLDecoder+DataDecoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XMLDecoder+DataDecoder.swift"; sourceTree = "<group>"; };
+		8E20DAF325702C6900AB8935 /* FeedListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedListView.swift; sourceTree = "<group>"; };
+		8E20DAF725702C7A00AB8935 /* FeedListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedListViewModel.swift; sourceTree = "<group>"; };
+		8E20DAFA25702C9200AB8935 /* FeedListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,11 +80,10 @@
 		8E20DABC256F13B600AB8935 /* AppleFeed */ = {
 			isa = PBXGroup;
 			children = (
+				8E20DAEE257029A200AB8935 /* App */,
 				8E20DAD3256F13EE00AB8935 /* API */,
 				8E20DADC256F13EE00AB8935 /* Extensions */,
-				8E20DAD2256F13EE00AB8935 /* FeedItem.swift */,
-				8E20DABD256F13B600AB8935 /* AppDelegate.swift */,
-				8E20DABF256F13B600AB8935 /* SceneDelegate.swift */,
+				8E20DAF0257029B600AB8935 /* Modules */,
 				8E20DAC1256F13B600AB8935 /* ViewController.swift */,
 				8E20DAC3256F13B600AB8935 /* Main.storyboard */,
 				8E20DAC6256F13B800AB8935 /* Assets.xcassets */,
@@ -130,6 +135,42 @@
 				8E20DADD256F13EE00AB8935 /* XMLDecoder+DataDecoder.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		8E20DAEE257029A200AB8935 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				8E20DABD256F13B600AB8935 /* AppDelegate.swift */,
+				8E20DABF256F13B600AB8935 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		8E20DAF0257029B600AB8935 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				8E20DAF2257029D400AB8935 /* FeedDetailsModule */,
+				8E20DAF1257029C200AB8935 /* FeedListModule */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		8E20DAF1257029C200AB8935 /* FeedListModule */ = {
+			isa = PBXGroup;
+			children = (
+				8E20DAD2256F13EE00AB8935 /* FeedItem.swift */,
+				8E20DAF325702C6900AB8935 /* FeedListView.swift */,
+				8E20DAF725702C7A00AB8935 /* FeedListViewModel.swift */,
+				8E20DAFA25702C9200AB8935 /* FeedListViewController.swift */,
+			);
+			path = FeedListModule;
+			sourceTree = "<group>";
+		};
+		8E20DAF2257029D400AB8935 /* FeedDetailsModule */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = FeedDetailsModule;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,12 +254,15 @@
 				8E20DADE256F13EE00AB8935 /* FeedItem.swift in Sources */,
 				8E20DAC2256F13B600AB8935 /* ViewController.swift in Sources */,
 				8E20DAE3256F13EE00AB8935 /* ApiConfiguration.swift in Sources */,
+				8E20DAFB25702C9200AB8935 /* FeedListViewController.swift in Sources */,
 				8E20DABE256F13B600AB8935 /* AppDelegate.swift in Sources */,
+				8E20DAF425702C6900AB8935 /* FeedListView.swift in Sources */,
 				8E20DAE1256F13EE00AB8935 /* FeedClient.swift in Sources */,
 				8E20DAE4256F13EE00AB8935 /* XMLDecoder+DataDecoder.swift in Sources */,
 				8E20DAE2256F13EE00AB8935 /* ApiConstants.swift in Sources */,
 				8E20DAC0256F13B600AB8935 /* SceneDelegate.swift in Sources */,
 				8E20DADF256F13EE00AB8935 /* FeedApiRouter.swift in Sources */,
+				8E20DAF825702C7A00AB8935 /* FeedListViewModel.swift in Sources */,
 				8E20DAE0256F13EE00AB8935 /* ApiClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
