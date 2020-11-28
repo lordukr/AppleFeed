@@ -45,14 +45,12 @@ struct FeedItem: Decodable, DynamicNodeDecoding {
   var content: String
   var imageUrl: FeedURL
   var pubDate: String
-  //  var author: Author
   
   enum CodingKeys: String, CodingKey {
     case title
     case content = "description"
     case imageUrl = "enclosure"
     case pubDate
-    //    case author
   }
   
   static func nodeDecoding(for key: CodingKey) -> XMLDecoder.NodeDecoding {

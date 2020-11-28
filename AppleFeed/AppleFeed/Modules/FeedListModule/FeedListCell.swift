@@ -38,6 +38,7 @@ class FeedListCell: UITableViewCell {
     titleLabel.font = UIFont.boldSystemFont(ofSize: 16)
     titleLabel.textColor = .black
     titleLabel.lineBreakMode = .byTruncatingTail
+    titleLabel.numberOfLines = 2
     
     titleLabel.snp.makeConstraints { (make) in
       make.top.equalToSuperview().inset(5)

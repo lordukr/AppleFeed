@@ -24,8 +24,10 @@
 		8E20DAF825702C7A00AB8935 /* FeedListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E20DAF725702C7A00AB8935 /* FeedListViewModel.swift */; };
 		8E20DAFB25702C9200AB8935 /* FeedListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E20DAFA25702C9200AB8935 /* FeedListViewController.swift */; };
 		8E20DB052570375000AB8935 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8E20DB042570375000AB8935 /* SnapKit */; };
-		8EC181E22572887A00DA68DE /* DetailsVIewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC181E12572887A00DA68DE /* DetailsVIewController.swift */; };
+		8EC181E22572887A00DA68DE /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC181E12572887A00DA68DE /* DetailsViewController.swift */; };
 		8EC181E52572895400DA68DE /* FeedDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC181E42572895400DA68DE /* FeedDetailsView.swift */; };
+		8EC181EC2572ECA200DA68DE /* FeedDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC181EB2572ECA200DA68DE /* FeedDetailsViewModel.swift */; };
+		8EC181F02572EE0900DA68DE /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 8EC181EF2572EE0900DA68DE /* Kingfisher */; };
 		8EF63B6F257258F40093AC5C /* FeedListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF63B6E257258F40093AC5C /* FeedListController.swift */; };
 		8EF63B7225725B930093AC5C /* NSObject+className.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF63B7125725B930093AC5C /* NSObject+className.swift */; };
 		8EF63B75257263510093AC5C /* FeedListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF63B74257263510093AC5C /* FeedListCell.swift */; };
@@ -48,8 +50,9 @@
 		8E20DAF325702C6900AB8935 /* FeedListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedListView.swift; sourceTree = "<group>"; };
 		8E20DAF725702C7A00AB8935 /* FeedListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedListViewModel.swift; sourceTree = "<group>"; };
 		8E20DAFA25702C9200AB8935 /* FeedListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedListViewController.swift; sourceTree = "<group>"; };
-		8EC181E12572887A00DA68DE /* DetailsVIewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsVIewController.swift; sourceTree = "<group>"; };
+		8EC181E12572887A00DA68DE /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		8EC181E42572895400DA68DE /* FeedDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedDetailsView.swift; sourceTree = "<group>"; };
+		8EC181EB2572ECA200DA68DE /* FeedDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedDetailsViewModel.swift; sourceTree = "<group>"; };
 		8EF63B6E257258F40093AC5C /* FeedListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedListController.swift; sourceTree = "<group>"; };
 		8EF63B7125725B930093AC5C /* NSObject+className.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+className.swift"; sourceTree = "<group>"; };
 		8EF63B74257263510093AC5C /* FeedListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedListCell.swift; sourceTree = "<group>"; };
@@ -60,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EC181F02572EE0900DA68DE /* Kingfisher in Frameworks */,
 				8E20DB052570375000AB8935 /* SnapKit in Frameworks */,
 				8E20DAEC256F153D00AB8935 /* XMLCoder in Frameworks */,
 				8E20DAE8256F14BB00AB8935 /* Alamofire in Frameworks */,
@@ -178,8 +182,9 @@
 		8E20DAF2257029D400AB8935 /* FeedDetailsModule */ = {
 			isa = PBXGroup;
 			children = (
-				8EC181E12572887A00DA68DE /* DetailsVIewController.swift */,
+				8EC181E12572887A00DA68DE /* DetailsViewController.swift */,
 				8EC181E42572895400DA68DE /* FeedDetailsView.swift */,
+				8EC181EB2572ECA200DA68DE /* FeedDetailsViewModel.swift */,
 			);
 			path = FeedDetailsModule;
 			sourceTree = "<group>";
@@ -204,6 +209,7 @@
 				8E20DAE7256F14BB00AB8935 /* Alamofire */,
 				8E20DAEB256F153D00AB8935 /* XMLCoder */,
 				8E20DB042570375000AB8935 /* SnapKit */,
+				8EC181EF2572EE0900DA68DE /* Kingfisher */,
 			);
 			productName = AppleFeed;
 			productReference = 8E20DABA256F13B600AB8935 /* AppleFeed.app */;
@@ -236,6 +242,7 @@
 				8E20DAE6256F14BB00AB8935 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				8E20DAEA256F153D00AB8935 /* XCRemoteSwiftPackageReference "XMLCoder" */,
 				8E20DB032570375000AB8935 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				8EC181EE2572EE0900DA68DE /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 8E20DABB256F13B600AB8935 /* Products */;
 			projectDirPath = "";
@@ -275,9 +282,10 @@
 				8E20DAE4256F13EE00AB8935 /* XMLDecoder+DataDecoder.swift in Sources */,
 				8E20DAE2256F13EE00AB8935 /* ApiConstants.swift in Sources */,
 				8E20DAC0256F13B600AB8935 /* SceneDelegate.swift in Sources */,
-				8EC181E22572887A00DA68DE /* DetailsVIewController.swift in Sources */,
+				8EC181E22572887A00DA68DE /* DetailsViewController.swift in Sources */,
 				8E20DADF256F13EE00AB8935 /* FeedApiRouter.swift in Sources */,
 				8EF63B75257263510093AC5C /* FeedListCell.swift in Sources */,
+				8EC181EC2572ECA200DA68DE /* FeedDetailsViewModel.swift in Sources */,
 				8E20DAF825702C7A00AB8935 /* FeedListViewModel.swift in Sources */,
 				8E20DAE0256F13EE00AB8935 /* ApiClient.swift in Sources */,
 			);
@@ -425,6 +433,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.anatolii.home.AppleFeed;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -444,6 +453,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.anatolii.home.AppleFeed;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -499,6 +509,14 @@
 				minimumVersion = 5.0.1;
 			};
 		};
+		8EC181EE2572EE0900DA68DE /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.15.8;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -516,6 +534,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 8E20DB032570375000AB8935 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
+		};
+		8EC181EF2572EE0900DA68DE /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8EC181EE2572EE0900DA68DE /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

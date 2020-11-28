@@ -8,7 +8,7 @@
 import UIKit
 
 protocol FeedListControllerDelegate: class {
-  func didSelectCell(at indexPath: IndexPath)
+  func didSelectCell(with item: FeedItem)
   func didUpdateDataSource()
 }
 
@@ -58,6 +58,8 @@ extension FeedListController: UITableViewDataSource {
 extension FeedListController: UITableViewDelegate {
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     tableView.deselectRow(at: indexPath, animated: true)
-    delegate?.didSelectCell(at: indexPath)
+    let item = items[indexPath.item]
+    
+    delegate?.didSelectCell(with: item)
   }
 }
