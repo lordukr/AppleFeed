@@ -74,7 +74,14 @@ extension FeedListViewModel {
       default:
         return state
       }
-    case .loaded, .failed:
+    case .loaded:
+      switch event {
+      case .onViewControllerAppear:
+        return .loading
+      default:
+        return state
+      }
+    case .failed:
       return state
     }
   }

@@ -42,15 +42,13 @@ class FeedListViewController: UIViewController {
       .sink { [weak self] (newState) in
         switch newState {
         case .failed(let error):
-          print("error")
+          print("error:\(error)")
           self?.feedListView.state = .error
         case .idle:
-          print("idle")
+          break
         case .loading:
           self?.feedListView.state = .loading
-          print("loading")
         case .loaded(let feed):
-          print("loaded")
           self?.controller.updateWith(feed: feed)
         }
       }.store(in: &cancellable)
@@ -64,7 +62,8 @@ class FeedListViewController: UIViewController {
 
 extension FeedListViewController: FeedListControllerDelegate {
   func didSelectCell(at indexPath: IndexPath) {
-    
+    let detailsVC = DetailsVIewController()
+    navigationController?.pushViewController(detailsVC, animated: true)
   }
   
   func didUpdateDataSource() {

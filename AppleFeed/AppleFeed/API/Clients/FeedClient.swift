@@ -9,7 +9,6 @@ import Foundation
 import Combine
 import Alamofire
 import XMLCoder
-import XMLParsing
 
 enum FeedClient {
   static let client = ApiClient()

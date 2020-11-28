@@ -44,16 +44,13 @@ class FeedListView: UIView {
       self?.activityIndicator.stopAnimating()
       switch newState {
       case .initial:
-        print("initial")
+        break
       case .loading:
         self?.activityIndicator.startAnimating()
-        print("loading")
       case .loaded:
         self?.tableView.reloadData()
-        print("loaded")
       case .error:
         self?.errorLabel.isHidden = false
-        print("error")
       }
     }.store(in: &bag)
   }
