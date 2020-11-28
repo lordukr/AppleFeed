@@ -25,16 +25,6 @@ struct FeedItem: Decodable {
     case content
     case author
   }
-  
-//  init(from decoder: Decoder) throws {
-//    let container = try decoder.container(keyedBy: FeedContainerKeys.self)
-//    let item = try? container.decode(FeedItem.self, forKey: .feed)
-//    let feedContainer = try container.nestedContainer(keyedBy: CodingKeys.self, forKey: .feed)
-//    
-//    self.title = try feedContainer.decode(String.self, forKey: .title)
-//    self.content = try feedContainer.decode(String.self, forKey: .content)
-//    self.author = try feedContainer.decode(Author.self, forKey: .author)
-//  }
 }
 
 struct Author: Decodable {

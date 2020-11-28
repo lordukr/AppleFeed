@@ -10,19 +10,27 @@ import Combine
 
 final class FeedListViewModel: ObservableObject {
   @Published private(set) var state: State = .idle
-  @Published var input = Event.initial
   
   private var bag = Set<AnyCancellable>()
   
   init() {
-    $input.sink { [weak self] (event) in
+    $state.sink { [weak self] (event) in
       switch event {
-      case .onViewControllerAppear:
+      case .idle:
+        print("FeedListViewModel - idle")
+      case .loading:
+        print("FeedListViewModel - loading")
         self?.loadFeed()
-      default:
-        break
+      case .loaded(_):
+        print("FeedListViewModel - loaded")
+      case .failed(_):
+        print("FeedListViewModel - failed")
       }
     }.store(in: &bag)
+  }
+  
+  func sendEvent(event: Event) {
+    state = Self.reduce(state: state, event: event)
   }
 }
 
@@ -44,33 +52,33 @@ extension FeedListViewModel {
 }
 
 extension FeedListViewModel {
-//  static func reduce(state: State, event: Event) -> State {
-//    switch state {
-//    case .idle:
-//      switch event {
-//      case .onViewControllerAppear:
-//        return .loading
-//      case .onFeedLoaded(let feed):
-//        return .loaded(feed)
-//      case .onFailedToLoadFeed(let error):
-//        return .failed(error)
-//      default:
-//        return state
-//      }
-//    case .loading:
-//      switch event {
-//      case .onFailedToLoadFeed(let error):
-//        return .failed(error)
-//      case .onFeedLoaded(let feed):
-//        return .loaded(feed)
-//      default:
-//        return state
-//      }
-//    case .loaded, .failed:
-//      return state
-//    }
-//  }
-//
+  static func reduce(state: State, event: Event) -> State {
+    switch state {
+    case .idle:
+      switch event {
+      case .onViewControllerAppear:
+        return .loading
+      case .onFeedLoaded(let feed):
+        return .loaded(feed)
+      case .onFailedToLoadFeed(let error):
+        return .failed(error)
+      default:
+        return state
+      }
+    case .loading:
+      switch event {
+      case .onFailedToLoadFeed(let error):
+        return .failed(error)
+      case .onFeedLoaded(let feed):
+        return .loaded(feed)
+      default:
+        return state
+      }
+    case .loaded, .failed:
+      return state
+    }
+  }
+
   func loadFeed() {
     FeedClient.getFeed()?
       .map(State.loaded)
