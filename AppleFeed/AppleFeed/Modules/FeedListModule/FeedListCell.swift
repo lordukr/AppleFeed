@@ -24,7 +24,7 @@ class FeedListCell: UITableViewCell {
   
   func update(item: FeedItem) {
     titleLabel.text = item.title
-    authorLabel.text = item.author.name
+    authorLabel.text = item.pubDate
   }
   
   private func setupUI() {

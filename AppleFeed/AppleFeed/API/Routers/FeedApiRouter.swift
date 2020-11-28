@@ -20,7 +20,7 @@ enum FeedApiRouter: APIConfiguration {
   var path: String {
     switch self {
     case .feed:
-      return "feed.xml"
+      return "breaking_news.rss"
     }
   }
   

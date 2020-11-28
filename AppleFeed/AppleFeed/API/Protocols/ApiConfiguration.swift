@@ -38,13 +38,9 @@ extension APIConfiguration {
 
 extension APIConfiguration {
     func asURLRequest() throws -> URLRequest {
-      let urlComps = URLComponents(string: API.kProductionServer.scheme + API.kProductionServer.baseURL + "/" + API.kProductionServer.api + path)
+        let urlComps = URLComponents(string: API.kProductionServer.scheme + API.kProductionServer.baseURL + "/" + API.kProductionServer.api + path)
   
-//        urlComps.scheme = API.kProductionServer.scheme
-//      urlComps.host = API.kProductionServer.baseURL
-//        urlComps.path = API.kProductionServer.api + path
-        
-      var urlRequest = URLRequest(url: (urlComps?.url)!)
+        var urlRequest = URLRequest(url: (urlComps?.url)!)
         
         // HTTP Method
         urlRequest.httpMethod = method.rawValue

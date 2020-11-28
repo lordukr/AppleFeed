@@ -11,7 +11,7 @@ import Foundation
 struct API {
     struct kProductionServer {
         static let scheme = "https://"
-        static let baseURL = "nshipster.com/"
+        static let baseURL = "nasa.gov/rss/dyn"
         static let api = ""
     }
 }
