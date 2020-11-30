@@ -9,7 +9,7 @@ import Foundation
 import XMLCoder
 
 struct Feed: Decodable {
-  var feedItems: [FeedItem]
+  var feedItems: [FeedItemDomainModel]
   
   enum CodingKeys: String, CodingKey {
     case feedItems = "channel"
@@ -22,11 +22,11 @@ struct Feed: Decodable {
   init(from decoder: Decoder) throws {
     let container = try decoder.container(keyedBy: CodingKeys.self)
     let nested = try container.nestedContainer(keyedBy: FeedItems.self, forKey: .feedItems)
-    feedItems = try nested.decode([FeedItem].self, forKey: .entry)
+    feedItems = try nested.decode([FeedItemDomainModel].self, forKey: .entry)
   }
 }
 
-struct FeedItem: Decodable, DynamicNodeDecoding {
+struct FeedItemDomainModel: Decodable, DynamicNodeDecoding {
   struct FeedURL: Decodable, DynamicNodeDecoding {
     var url: String
     var type: String

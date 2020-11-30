@@ -8,7 +8,7 @@
 import UIKit
 
 protocol FeedListControllerDelegate: class {
-  func didSelectCell(with item: FeedItem)
+  func didSelectCell(with item: FeedItemDomainModel)
   func didUpdateDataSource()
 }
 
@@ -19,14 +19,15 @@ class FeedListController: NSObject {
     items.count
   }
   
-  private var items: [FeedItem] = []
+  private var items: [FeedItemDomainModel] = []
   
   weak var delegate: FeedListControllerDelegate?
   
   init(tableView: UITableView) {
     self.tableView = tableView
-    tableView.register(FeedListCell.self, forCellReuseIdentifier: FeedListCell.className)
     super.init()
+    
+    tableView.register(FeedListCell.self, forCellReuseIdentifier: FeedListCell.className)
     tableView.delegate = self
     tableView.dataSource = self
   }
@@ -48,8 +49,9 @@ extension FeedListController: UITableViewDataSource {
     }
     
     let item = items[indexPath.item]
+    let model = FeedListCellViewModel(item)
     
-    cell.update(item: item)
+    cell.viewModel = model
     
     return cell
   }

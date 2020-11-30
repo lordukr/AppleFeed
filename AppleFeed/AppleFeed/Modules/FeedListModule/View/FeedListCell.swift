@@ -7,24 +7,32 @@
 
 import UIKit
 import SnapKit
+import Combine
 
 class FeedListCell: UITableViewCell {
+  @Published var viewModel = FeedListCellViewModel.placeholder()
+  private var bag = Set<AnyCancellable>()
+  
   private(set) lazy var titleLabel = UILabel()
-  private(set) lazy var authorLabel = UILabel()
+  private(set) lazy var publishedDateLabel = UILabel()
   
   override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
     super.init(style: style, reuseIdentifier: reuseIdentifier)
     setupUI()
+    bind()
   }
   
   required init?(coder: NSCoder) {
     super.init(coder: coder)
     setupUI()
+    bind()
   }
   
-  func update(item: FeedItem) {
-    titleLabel.text = item.title
-    authorLabel.text = item.pubDate
+  private func bind() {
+    $viewModel.sink { [weak self] (model) in
+      self?.titleLabel.text = model.title
+      self?.publishedDateLabel.text = model.pubDate
+    }.store(in: &bag)
   }
   
   private func setupUI() {
@@ -47,13 +55,13 @@ class FeedListCell: UITableViewCell {
   }
   
   private func setupAuthorLabel() {
-    addSubview(authorLabel)
+    addSubview(publishedDateLabel)
     
-    authorLabel.font = UIFont.systemFont(ofSize: 12)
-    authorLabel.textColor = .black
-    authorLabel.lineBreakMode = .byTruncatingTail
+    publishedDateLabel.font = UIFont.systemFont(ofSize: 12)
+    publishedDateLabel.textColor = .black
+    publishedDateLabel.lineBreakMode = .byTruncatingTail
     
-    authorLabel.snp.makeConstraints { (make) in
+    publishedDateLabel.snp.makeConstraints { (make) in
       make.top.equalTo(titleLabel.snp.bottom).offset(10)
       make.leading.trailing.bottom.equalToSuperview().inset(10)
     }

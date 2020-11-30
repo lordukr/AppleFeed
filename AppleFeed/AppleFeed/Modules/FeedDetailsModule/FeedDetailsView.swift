@@ -52,6 +52,7 @@ class FeedDetailsView: UIView {
     addSubview(feedImageView)
     
     feedImageView.contentMode = .scaleAspectFit
+    feedImageView.kf.indicatorType = .activity
     
     feedImageView.snp.makeConstraints { (make) in
       make.top.leading.trailing.equalToSuperview()
@@ -66,7 +67,7 @@ class FeedDetailsView: UIView {
     
     feedTextLabel.snp.makeConstraints { (make) in
       make.top.equalTo(feedImageView.snp.bottom).offset(10)
-      make.leading.trailing.equalToSuperview()
+      make.leading.trailing.equalToSuperview().inset(10)
       make.bottom.lessThanOrEqualToSuperview()
     }
   }

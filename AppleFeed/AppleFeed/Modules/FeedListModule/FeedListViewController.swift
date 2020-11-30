@@ -61,8 +61,7 @@ class FeedListViewController: UIViewController {
 }
 
 extension FeedListViewController: FeedListControllerDelegate {
-  func didSelectCell(with item: FeedItem) {
-    
+  func didSelectCell(with item: FeedItemDomainModel) {
     let model = FeedDetailsViewModel(imageURL: item.imageUrl.url, text: item.content)
     
     let detailsVC = DetailsViewController()
